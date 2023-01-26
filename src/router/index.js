@@ -13,9 +13,10 @@ const routes = [
     component: SchedulesView,
   },
   {
-    path: "/workout/:day",
-    name: "about",
+    path: "/workout/:name",
+    name: "workout",
     component: WorkoutDay,
+    props: true,
   },
   {
     path: "/exercise/:type/:name",

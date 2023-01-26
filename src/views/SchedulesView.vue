@@ -1,11 +1,14 @@
 <template>
   <div class="about">
     <h1>View your schedules</h1>
-    <v-data-table
-      :headers="headers"
-      :items="schedule"
-      class="elevation-1"
-    ></v-data-table>
+    <v-data-table :headers="headers" :items="schedule" class="elevation-1">
+      <template v-slot:[`item.exercise`]="{ item }">
+        <router-link
+          :to="{ name: 'workout', params: { name: item.exercise } }"
+          >{{ item.exercise }}</router-link
+        >
+      </template>
+    </v-data-table>
   </div>
 </template>
 

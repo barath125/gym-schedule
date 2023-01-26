@@ -22,11 +22,11 @@ export default [
     image: "https://i.ytimg.com/vi/XTq4ketkcUA/maxresdefault.jpg",
   },
   {
-    name: "Fly",
+    name: "Reverse Fly",
     set: "3",
     rep: "15",
     weight: [10, 15, 20],
     image:
-      "https://.org/wp-content/uploads/2018/09/204-2047074_man-doing-the-bench-press-exercise-royalty-free-vector-bench-press-clip.png.jpg",
+      "https://s3.amazonaws.com/prod.skimble/assets/2251224/image_iphone.jpg",
   },
 ];
