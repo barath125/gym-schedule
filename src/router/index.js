@@ -1,20 +1,26 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import About from "../views/AboutView.vue";
+import SchedulesView from "../views/SchedulesView.vue";
+import ExerciseDetails from "../views/ExerciseDetails.vue";
+import WorkoutDay from "../views/WorkoutDay.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "schedules",
+    component: SchedulesView,
   },
   {
-    path: "/about",
+    path: "/workout/:day",
     name: "about",
-    component: About,
+    component: WorkoutDay,
+  },
+  {
+    path: "/exercise/:type/:name",
+    name: "exercise-details",
+    component: ExerciseDetails,
   },
 ];
 
