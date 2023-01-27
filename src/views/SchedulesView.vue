@@ -40,8 +40,5 @@ export default {
       schedule: (state) => state.schedule,
     }),
   },
-  mounted() {
-    console.log(this.schedule);
-  },
 };
 </script>

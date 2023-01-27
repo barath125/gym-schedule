@@ -26,7 +26,7 @@ export default [
   {
     index: 5,
     name: "Friday",
-    exercise: "Bie-Tri exercise",
+    exercise: "bi_tri exercise",
     timing: "6:00-8:00",
   },
   {

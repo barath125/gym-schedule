@@ -1,13 +1,13 @@
 <template>
   <div class="about">
-    <h1>View your Workouts in {{ name }}!</h1>
+    <h1>{{ name }}!</h1>
     <v-data-table
       :headers="headers"
       :items="getWorkoutName"
       class="elevation-1"
     >
       <template v-slot:[`item.image`]="{ item }">
-        <v-img :src="item.image" alt="workout image" max-width="100px"></v-img>
+        <v-img :src="item.image" alt="workout image" max-width="150px"></v-img>
       </template>
       <template v-slot:[`item.weight`]="{ item }">
         <v-chip v-for="weight in item.weight" :key="weight" class="ma-2">
@@ -56,10 +56,19 @@ export default {
       schedule: (state) => state.schedule,
     }),
     getWorkoutName() {
-      if (String(this.name).toLowerCase() === "chest exercise") {
-        return this.$store.state.chest;
-      } else {
-        return [];
+      switch (String(this.name).toLowerCase()) {
+        case "chest exercise":
+          return this.$store.state.chest;
+        case "lat exercise":
+          return this.$store.state.lat;
+        case "shoulder exercise":
+          return this.$store.state.shoulder;
+        case "bi_tri exercise":
+          return this.$store.state.bi_tri;
+        case "leg exercise":
+          return this.$store.state.leg;
+        default:
+          return [];
       }
     },
   },
